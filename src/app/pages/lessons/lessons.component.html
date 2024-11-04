@@ -1,0 +1,10 @@
+<div
+  *ngFor="let level of levels; let i = index"
+  class="flex justify-center items-center h-full w-full mb-8"
+  [ngClass]="({
+   'mt-20': i === 0,
+   'mb-32': isDropdownOpen[i] // Ajusta este valor según sea necesario
+ })"
+>
+<app-level [level]="level" (dropdownStateChange)="onDropdownStateChange(i, $event)"></app-level>
+</div>

@@ -1,0 +1,26 @@
+
+<section class="text-gray-600 body-font">
+  
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20 ">
+        <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-orange-900">{{ chordType }}</h1>
+        <h4 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-orange-900">Composicion: {{ chordComposition || 'Cargando...' }}</h4>
+      </div>
+      <div class="lg:w-2/3 w-full mx-auto  overflow-auto ">
+        <table class="table-auto w-full text-left whitespace-no-wrap">
+          <thead  class="bg-red-900 text-xs text-amber-300 uppercase dark:text-gray-400 " >
+            <tr class="border-b border-gray-200 dark:border-gray-700"> 
+              <th scope="col" class="px-4 py-3 title-font tracking-wider font-medium text-orange-900 text-sm bg-gray-100 rounded-tl rounded- text-center">Acorde</th>
+              <th scope="col" class="px-4 py-3 title-font tracking-wider font-medium text-orange-900 text-sm bg-gray-100 text-center">Notas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let chord of chords" class="border-b border-gray-200 dark:border-gray-700">
+              <td class="px-4 py-3 text-center">{{ chord.name }}</td>
+              <td class="px-4 py-3 text-center">{{ chord.notes }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>

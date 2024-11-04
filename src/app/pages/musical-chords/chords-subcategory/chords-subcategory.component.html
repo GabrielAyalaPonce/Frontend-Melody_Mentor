@@ -1,0 +1,28 @@
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap w-full mb-20">
+
+      <div class="flex flex-wrap -m-4">
+        
+        <div *ngFor="let subcategory of subcategories" class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="w-96 bg-orange-900 p-6 rounded-lg">
+            <button
+              (click)="navigateTo('resources/musical-chords/chord-detail/' + subcategory)"
+              class="inline-block w-full  h-40 rounded  object-cover object-center mb-6 bg-red-700  hover:bg-emerald-700 hover:text-white text-amber-300 text-5xl min-w-max px-4 py-2"
+              >
+              {{subcategory}}
+            </button>
+            <h2 class="text-lg text-amber-400 font-medium title-font mb-4 text-center">
+              {{category}}
+            </h2>
+            <p class="leading-relaxed text-amber-400">
+              {{descriptionSubcategory}}
+            </p>
+          </div>
+        </div>
+            
+      </div>
+    </div>
+</div>
+  </section>
+  
